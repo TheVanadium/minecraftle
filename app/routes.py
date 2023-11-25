@@ -147,7 +147,7 @@ def submitstats():
                 response["succeeded"] = conn.insert_record(user_id, today, int(win), int(attempts))
             print(response)
         except ValueError:
-            print("Attmpted SQL injection!")
+            print("Attempted SQL injection!")
     print(response)
     return jsonify(response)
 
