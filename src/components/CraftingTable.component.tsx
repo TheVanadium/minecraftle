@@ -29,7 +29,6 @@ export default function CraftingTable({
   const colorTable = colorTables[tableNum];
 
   const currentTable = craftingTables[tableNum];
-  console.log(currentTable);
 
   const [isDown, setIsDown] = useState(false); // TODO: remove this
   const [isDragging, setIsDragging] = useState(false);
@@ -86,7 +85,6 @@ export default function CraftingTable({
         return newCraftingTables;
       });
       // setTimeout hack to prevent cursor item changing before mouse movement is registered
-
       setTimeout(() => setCursorItem(oldCraftingTableItem), 0);
     }
     const result = checkAllVariants(currentTable);
